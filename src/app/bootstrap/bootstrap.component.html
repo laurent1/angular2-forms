@@ -1,0 +1,32 @@
+<h3>NG2 Bootstrap</h3>
+
+<div class="container">
+
+  <a href="http://valor-software.com/ng2-bootstrap/#/">ng2-bootstrap documentation</a>
+
+  <br>
+
+  <form>
+
+      <div class="form-group" style="display: inline-block;">
+        <datepicker name="startDate" [(ngModel)]="startDate"
+                    [showWeeks]="false"
+                    [minDate]="minDate">
+        </datepicker>
+      </div>
+
+  </form>
+
+  <h3>{{ startDate }}</h3>
+
+  <div class="form-group">
+    <rating name="postRating" [(ngModel)]="postRating"
+            [max]="10"
+            [stateOn]="'glyphicon-star'"
+            [stateOff]="'glyphicon-star-empty'"
+            (onHover)="hover($event)"
+            (onLeave)="leave($event)">
+    </rating>
+  </div>
+  <h3>{{ postRating }}</h3>
+</div>
